@@ -1,0 +1,14 @@
+.aside {
+  display: grid;
+  grid-area: a;
+  background-color: #313131;
+  color: white;
+  text-align: center;
+  border: 2px solid silver;
+  padding: 10px;
+}
+
+.item a {
+  text-decoration: none;
+  color: white;
+}

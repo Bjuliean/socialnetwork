@@ -1,0 +1,10 @@
+.footer {
+  display: grid;
+  grid-area: f;
+  height: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 2px solid silver;
+  margin-top: 20px;
+}

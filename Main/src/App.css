@@ -1,0 +1,18 @@
+.App {
+  display: grid;
+  grid-template-areas:
+  "h h"
+  "a m"
+  "f f";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 6fr 1fr;
+}
+
+.page {
+  display: grid;
+  grid-area: m;
+  background-color: #313131;
+  color: white;
+  border: 2px solid silver;
+  margin-left: 20px;
+}

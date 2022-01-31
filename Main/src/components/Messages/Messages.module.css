@@ -1,0 +1,7 @@
+.messages {
+  display: grid;
+  grid-template-areas: "nav mes";
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: 1fr;
+  padding: 10px;
+}
