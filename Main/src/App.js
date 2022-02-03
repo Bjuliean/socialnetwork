@@ -9,20 +9,18 @@ import News from './components/News/News.jsx';
 
 function App(props) {
   return (
-    <BrowserRouter>
       <div className="App">
         <Header />
         <Aside />
         <div className="page">
           <Routes>
-            <Route path="/profile/*" element={<Profile state={props.state.profilePage} />} />
+            <Route path="/profile/*" element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
             <Route path="/messages/*" element={<Messages state={props.state.messagesPage} />} />
             <Route path="/news/*" element={<News />} />
           </Routes>
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
   );
 }
 
