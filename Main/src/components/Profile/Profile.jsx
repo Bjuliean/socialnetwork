@@ -5,7 +5,7 @@ import Posts from './Posts/Posts';
 const Profile = (props) => {
   return(
     <div className={s.profile}>
-      <Posts postsData={props.state.postsData} addPost={props.addPost} />
+      <Posts postsData={props.state.postsData} dispatch={props.dispatch} />
     </div>
   );
 }

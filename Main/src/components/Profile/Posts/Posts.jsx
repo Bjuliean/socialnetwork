@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Posts.module.css';
 import PostObject from './PostObject/PostObject';
+import { addPostActionCreator } from '../../../Redux/State';
 
 const Posts = (props) => {
 
@@ -10,7 +11,7 @@ let postsElements = props.postsData.map(posts => <PostObject id={posts.id}  mess
 
 let addPost = () => {
   let text = newPostElement.current.value;
-  props.addPost(text);
+  props.dispatch(addPostActionCreator(text))
   newPostElement.current.value = '';
 }
 

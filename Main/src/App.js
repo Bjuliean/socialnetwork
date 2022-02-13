@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Header from './components/Header/Header.jsx';
 import Aside from './components/Aside/Aside.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -14,8 +14,8 @@ function App(props) {
         <Aside />
         <div className="page">
           <Routes>
-            <Route path="/profile/*" element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
-            <Route path="/messages/*" element={<Messages state={props.state.messagesPage} />} />
+            <Route path="/profile/*" element={<Profile state={props.state.profilePage} dispatch={props.dispatch} />} />
+            <Route path="/messages/*" element={<Messages state={props.state.messagesPage} dispatch={props.dispatch} />} />
             <Route path="/news/*" element={<News />} />
           </Routes>
         </div>
