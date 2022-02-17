@@ -3,7 +3,7 @@ import s from './Messages.module.css';
 import Dialogs from './Dialogs/Dialogs';
 import DialogsNav from './DialogsNav/DialogsNav';
 import {NavLink} from "react-router-dom";
-import { addMessageActionCreator } from '../../Redux/State';
+import { addMessageActionCreator } from '../../Redux/messages-reducer';
 
 
 const Messages = (props) => {

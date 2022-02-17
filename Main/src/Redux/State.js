@@ -1,3 +1,6 @@
+import profileReducer from './profile-reducer';
+import messagesReducer from './messages-reducer';
+
 let store  = {
   _state: {
     messagesPage: {
@@ -38,40 +41,10 @@ let store  = {
   },
 
   dispatch(action) {
-    if(action.type === 'ADD-POST')
-    {
-      let newPost = {
-        id: 5,
-        message: action.postMessage,
-        likes: 0
-      };
-      this._state.profilePage.postsData.push(newPost);
-      this._rerenderEntireTree(this._state);
-    }
-    else if(action.type === 'ADD-MESSAGE')
-    {
-      let newMessage = {
-        id: 5,
-        message: action.message,
-        name: "Me"
-      }
-      this._state.messagesPage.dialogsData.push(newMessage);
-      this._rerenderEntireTree(this._state);
-    }
-  }
-}
-
-export const addPostActionCreator = (text) => {
-  return {
-    type: 'ADD-POST',
-    postMessage: text
-  }
-}
-
-export const addMessageActionCreator = (text) => {
-  return {
-    type: 'ADD-MESSAGE',
-    message: text
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+    
+    this._rerenderEntireTree(this._state);
   }
 }
 
